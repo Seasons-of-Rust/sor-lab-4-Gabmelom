@@ -32,14 +32,14 @@ impl Shop {
                 match self_card.fight(other_card) {
                     FightResult::Win => score += 1,
                     FightResult::Loss => score -= 1,
-                    _ => ()
+                    _ => (),
                 }
             }
         }
         match score {
             1.. => FightResult::Win,
             0 => FightResult::Tie,
-            _ => FightResult::Loss
+            _ => FightResult::Loss,
         }
     }
 }
